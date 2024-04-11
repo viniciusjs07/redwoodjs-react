@@ -41,3 +41,9 @@ model Contact {
   createdAt DateTime @default(now())
 }
 
+model RW_DataMigration {
+  version    String   @id
+  name       String
+  startedAt  DateTime
+  finishedAt DateTime
+}
