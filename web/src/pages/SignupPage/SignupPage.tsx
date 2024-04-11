@@ -42,7 +42,12 @@ const SignupPage = () => {
       toast.error(response.error);
     } else {
       // user is signed in automatically
-      toast.success('Welcome!');
+      console.log('response ', response);
+      if (response.message === false) {
+        toast.success('Desculpe! Você não pode criar uma conta nesse sistema.');
+      } else {
+        toast.success('Conta criada com sucesso!');
+      }
     }
   };
 

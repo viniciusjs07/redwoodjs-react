@@ -134,14 +134,16 @@ export const handler = async (
       salt,
       userAttributes: _userAttributes,
     }) => {
-      return db.user.create({
-        data: {
-          email: username,
-          hashedPassword: hashedPassword,
-          salt: salt,
-          // name: userAttributes.name
-        },
-      });
+      // return false para outros usuários não conseguirem criar uma conta
+      return false;
+      // return db.user.create({
+      //   data: {
+      //     email: username,
+      //     hashedPassword: hashedPassword,
+      //     salt: salt,
+      //     // name: userAttributes.name
+      //   },
+      // });
     },
 
     // Include any format checks for password here. Return `true` if the
