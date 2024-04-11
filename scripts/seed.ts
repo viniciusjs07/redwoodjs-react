@@ -13,10 +13,10 @@ export default async () => {
       // To try this example data with the UserExample model in schema.prisma,
       // uncomment the lines below and run 'yarn rw prisma migrate dev'
       {
-        name: 'Admin',
-        email: 'admin@admin.com',
-        hashedPassword: 'sdaadas',
-        salt: 'sdad',
+        name: 'manager',
+        email: 'manager@manager.com',
+        hashedPassword: '',
+        salt: '',
       },
     ];
     console.log(
