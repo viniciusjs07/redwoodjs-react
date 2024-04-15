@@ -10,17 +10,17 @@
 //
 // See https://storybook.js.org/docs/react/writing-stories/args.
 
-import type { Meta, StoryObj } from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/react';
 
-import Widget from './Widget'
+import Widget from './Widget';
 
 const meta: Meta<typeof Widget> = {
   component: Widget,
   tags: ['autodocs'],
-}
+};
 
-export default meta
+export default meta;
 
-type Story = StoryObj<typeof Widget>
+type Story = StoryObj<typeof Widget>;
 
-export const Primary: Story = {}
+export const Primary: Story = {};

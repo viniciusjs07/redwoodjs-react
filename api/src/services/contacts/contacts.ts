@@ -30,18 +30,15 @@ export const createContact: MutationResolvers['createContact'] = ({
   });
 };
 
-// export const updateContact: MutationResolvers['updateContact'] = ({
-//   id,
-//   input,
-// }) => {
-//   return db.contact.update({
-//     data: input,
-//     where: { id },
-//   });
-// };
+export const updateContact = ({ id, input }) => {
+  return db.contact.update({
+    data: input,
+    where: { id },
+  });
+};
 
-// export const deleteContact: MutationResolvers['deleteContact'] = ({ id }) => {
-//   return db.contact.delete({
-//     where: { id },
-//   });
-// };
+export const deleteContact = ({ id }) => {
+  return db.contact.delete({
+    where: { id },
+  });
+};

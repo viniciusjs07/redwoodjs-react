@@ -40,7 +40,7 @@ const LoginPage = () => {
     } else if (response.error) {
       toast.error(response.error);
     } else {
-      toast.success('Welcome back!');
+      toast.success('Bem-vindo de volta!');
     }
   };
 
@@ -48,7 +48,7 @@ const LoginPage = () => {
     <>
       <Metadata title="Login" />
 
-      <main className="rw-main">
+      <main className="rw-main mx-auto mt-12 w-96">
         <Toaster toastOptions={{ className: 'rw-toast', duration: 6000 }} />
         <div className="rw-scaffold rw-login-container">
           <div className="rw-segment">
@@ -104,7 +104,7 @@ const LoginPage = () => {
                   <div className="rw-forgot-link">
                     <Link
                       to={routes.forgotPassword()}
-                      className="rw-forgot-link"
+                      className="rw-forgot-link underline"
                     >
                       Forgot Password?
                     </Link>
@@ -119,7 +119,7 @@ const LoginPage = () => {
               </div>
             </div>
           </div>
-          <div className="rw-login-link">
+          <div className="rw-login-link mt-2 text-center">
             <span>Don&apos;t have an account?</span>{' '}
             <Link to={routes.signup()} className="rw-link">
               Sign up!

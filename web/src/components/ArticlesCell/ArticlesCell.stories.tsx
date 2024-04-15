@@ -1,35 +1,20 @@
-import type { Meta, StoryObj } from '@storybook/react';
-
 import { Loading, Empty, Failure, Success } from './ArticlesCell';
 import { standard } from './ArticlesCell.mock';
 
-const meta: Meta = {
-  title: 'Cells/ArticlesCell',
-  tags: ['autodocs'],
+export const loading = () => {
+  return Loading ? <Loading /> : null;
 };
 
-export default meta;
-
-export const loading: StoryObj<typeof Loading> = {
-  render: () => {
-    return Loading ? <Loading /> : <></>;
-  },
+export const empty = () => {
+  return Empty ? <Empty /> : null;
 };
 
-export const empty: StoryObj<typeof Empty> = {
-  render: () => {
-    return Empty ? <Empty /> : <></>;
-  },
+export const failure = () => {
+  return Failure ? <Failure error={new Error('Oh no')} /> : null;
 };
 
-export const failure: StoryObj<typeof Failure> = {
-  render: (args) => {
-    return Failure ? <Failure error={new Error('Oh no')} {...args} /> : <></>;
-  },
+export const success = () => {
+  return Success ? <Success articles={standard().articles} /> : null;
 };
 
-export const success: StoryObj<typeof Success> = {
-  render: (args) => {
-    return Success ? <Success {...standard()} {...args} /> : <></>;
-  },
-};
+export default { title: 'Cells/ArticlesCell' };

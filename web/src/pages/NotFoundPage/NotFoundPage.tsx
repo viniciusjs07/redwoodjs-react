@@ -37,8 +37,8 @@ export default () => (
     />
     <section>
       <h1>
-        <span>404 Page Not Found</span>
+        <span>404 Página não encontrada</span>
       </h1>
     </section>
   </main>
-)
+);
