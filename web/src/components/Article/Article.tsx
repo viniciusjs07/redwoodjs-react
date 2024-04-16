@@ -21,6 +21,9 @@ const Article = ({ article, summary = false }: Props) => {
       <header>
         <h2 className="text-xl font-semibold text-blue-700">
           <Link to={routes.article({ id: article.id })}>{article.title}</Link>
+          <span className="ml-2 font-normal text-gray-400">
+            Criado por: {article.user.name}
+          </span>
         </h2>
       </header>
       <div className="mt-2 font-light text-gray-900">

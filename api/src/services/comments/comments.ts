@@ -13,7 +13,6 @@ interface CreateCommentArgs {
 }
 
 export const createComment = ({ input }: CreateCommentArgs) => {
-  requireAuth({ roles: 'admin' });
   return db.comment.create({
     data: input,
   });

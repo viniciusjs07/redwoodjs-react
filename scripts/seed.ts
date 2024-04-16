@@ -27,6 +27,7 @@ export default async () => {
         name: 'admin',
         email: 'admin@admin.com',
         password: 'admin@admin',
+        roles: 'admin',
       },
     ];
     console.log(
@@ -40,6 +41,7 @@ export default async () => {
           data: {
             name: user.name,
             email: user.email,
+            roles: user.roles,
             hashedPassword,
             salt,
           },

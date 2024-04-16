@@ -21,6 +21,9 @@ export const QUERY: TypedDocumentNode<
       title
       body
       createdAt
+      user {
+        name
+      }
     }
   }
 `;

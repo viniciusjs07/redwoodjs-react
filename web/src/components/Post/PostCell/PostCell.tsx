@@ -13,7 +13,7 @@ export const QUERY: TypedDocumentNode<
   FindPostByIdVariables
 > = gql`
   query FindPostById($id: Int!) {
-    post: post(id: $id) {
+    post: adminPost(id: $id) {
       id
       title
       body

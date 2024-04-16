@@ -26,7 +26,7 @@ const DELETE_POST_MUTATION: TypedDocumentNode<
 const PostsList = ({ posts }: FindPosts) => {
   const [deletePost] = useMutation(DELETE_POST_MUTATION, {
     onCompleted: () => {
-      toast.success('Post deleted');
+      toast.success('Post deletado');
     },
     onError: (error) => {
       toast.error(error.message);
