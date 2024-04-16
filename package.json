@@ -26,6 +26,7 @@
   "dependencies": {
     "@redwoodjs/cli-data-migrate": "7.3.0",
     "@redwoodjs/cli-storybook": "^7.3.0",
-    "@types/node": "^20.12.6"
+    "@types/node": "^20.12.6",
+    "crypto-js": "^4.2.0"
   }
 }

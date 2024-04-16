@@ -5,13 +5,15 @@ import type {
   MutationResolvers,
 } from 'types/graphql';
 
+import { requireAuth } from 'src/lib/auth';
 import { db } from 'src/lib/db';
 
 interface CreateCommentArgs {
-  input: Prisma.CommentCreateInput;
+  input: Prisma.CommentCreateInput | Prisma.CommentUncheckedCreateInput;
 }
 
 export const createComment = ({ input }: CreateCommentArgs) => {
+  requireAuth({ roles: 'admin' });
   return db.comment.create({
     data: input,
   });
@@ -40,6 +42,7 @@ export const Comment: CommentRelationResolvers = {
 };
 
 export const deleteComment: MutationResolvers['deleteComment'] = ({ id }) => {
+  requireAuth({ roles: ['moderator', 'admin'] });
   return db.comment.delete({
     where: { id },
   });

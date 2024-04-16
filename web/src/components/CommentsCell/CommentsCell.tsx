@@ -18,6 +18,7 @@ export const QUERY: TypedDocumentNode<
       name
       body
       createdAt
+      postId
     }
   }
 `;
